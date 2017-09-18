@@ -1,0 +1,159 @@
+html{
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #47c9af;
+    color: #74777b;
+    font-weight: 300;
+    font-size: 1.5em;
+    font-family: 'Releway',serif;
+}
+a:link,a:visited,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+*:after,*:before,*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:after,*:before{
+    display: block;
+    content: '';
+}
+*:after{
+    clear: both;
+}
+/*导航*/
+
+.nav{
+    width: 800px;
+    height: 300px;
+    margin: 200px auto;
+}
+.nav li{
+    display: inline-block;
+    margin: 0 1em;
+}
+.tooltip{
+    display: inline-block;
+    font-weight: 700;
+    color: rgba(0,0,0,0.3);
+    padding: 0.15em 0.15em ;
+    position: relative;
+    -webkit-transition: color  .5s;
+    -moz-transition: color  .5s;
+    -o-transition: color  .5s;
+    transition: color  .5s;
+}
+.tooltip:hover{
+    color: #ffffff;
+}
+.tooltip-content{
+    position: absolute;
+    z-index: 100;
+    bottom: 100%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    text-align: center;
+    padding-top: 25px;
+    color: #47c9af;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+.tooltip-content i{
+    opacity: 0;
+    filter:alpha(opacity=0);
+    -webkit-transition: all  .5s;
+    -moz-transition: all  .5s;
+    -o-transition: all  .5s;
+    transition: all  .5s;
+}
+.tooltip:hover .tooltip-content i,
+.tooltip:hover .tooltip-content{
+    opacity: 1;
+    filter:alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+    -moz-transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+    -ms-transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+    -o-transform: translate3d(0,10,0) rotate3d(1,1,1,0deg);
+    transform: translate3d(0,0,0) rotate3d(1,1,1,0deg);
+}
+.tooltip-content:after{
+    display: block;
+    content: '';
+    width: 30px;
+    height: 20px;
+    background: url("../img/tooltip1.svg") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin:-7px auto 0;
+}
+.tooltip-effect-1 .tooltip-content{
+    -webkit-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);/*translateY(10px)*/
+    -moz-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);/*rotate3d(x,y,z,angle),x,y,z值在0到1之间*/
+    -ms-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    -o-transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+
+}
+.tooltip-effect-2 .tooltip-content{
+    -webkit-transform: translate3d(0,20px,0);
+    -moz-transform: translate3d(0,20px,0);
+    -ms-transform: translate3d(0,20px,0);
+    -o-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+.tooltip-effect-3 .tooltip-content{
+    -webkit-transform: translate3d(0,-15px,0);
+    -moz-transform: translate3d(0,-15px,0);
+    -ms-transform: translate3d(0,-15px,0);
+    -o-transform: translate3d(0,-15px,0);
+    transform: translate3d(0,-15px,0);
+}
+.tooltip-effect-4 .tooltip-content{
+    -webkit-transform: rotate3d(0,1,0,90deg);
+    -moz-transform: rotate3d(0,1,0,90deg);
+    -ms-transform: rotate3d(0,1,0,90deg);
+    -o-transform: rotate3d(0,1,0,90deg);
+    transform: rotate3d(0,1,0,90deg);
+}
+
+.tooltip-effect-5 .tooltip-content{
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+}
+.tooltip-content i{
+    -webkit-transform: scale(.1);
+    -moz-transform: scale(.1);
+    -ms-transform: scale(.1);
+    -o-transform: scale(.1);
+    transform: scale(.1);
+}
